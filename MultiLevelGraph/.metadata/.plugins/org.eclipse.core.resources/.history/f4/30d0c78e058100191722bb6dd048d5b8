@@ -138,13 +138,13 @@ public class Main {
 					}
 				}
 			}
-		}
-		/* bd를 이용하여 최단경로 구하기 */
-		System.out.print("\n---\npath: "+index); 
-		int v = bd[dlevel][index]; // v = bd[3][4] = 3 
-		for(int u = dlevel-1; u > 0 ; u--) {
-			System.out.print(" <- " + v); 
-			v = bd[u][v]; // v = bd[2][3] = 1
+			/* bd를 이용하여 최단경로 구하기 */
+			System.out.print("\n---\npath: "+index); 
+			int v = bd[dlevel][index]; // v = bd[3][4] = 3 
+			for(int u = dlevel-1; u > 0 ; u--) {
+				System.out.print(" <- " + v); 
+				v = bd[u][v]; // v = bd[2][3] = 1
+			}
 		}
 	}
 }
